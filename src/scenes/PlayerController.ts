@@ -2,132 +2,165 @@ import { Input, Physics, Types } from 'phaser';
 
 import StateMachine, { IStateBase } from '../statemachine/StateMachine';
 
-// type Hooks = {
-//   [x: string]: IStateBase
-// };
+type Hooks = {
+  [x: string]: IStateBase
+};
 
 class PlayerController {
   private captainSpeed = 4;
 
   private stateMachine: StateMachine;
 
+  private sprite!: Physics.Matter.Sprite;
+
   constructor(
-    private sprite: Physics.Matter.Sprite,
+    private scene: Phaser.Scene,
     private cursors: Types.Input.Keyboard.CursorKeys,
+    map: Phaser.Tilemaps.Tilemap,
   ) {
+    this.createSprite(map);
+
     this.createCaptainAnimations();
 
     this.stateMachine = new StateMachine(this, 'player');
 
-    this.stateMachine
-      .addState('walk', {
-        onEnter: this.walkOnEnter,
-        onUpdate: this.walkOnUpdate,
-      })
-      .addState('jump', {
-        onUpdate: this.jumpOnUpdate,
-        onEnter: this.jumpOnEnter,
-      })
-      .addState('idle', {
-        onEnter: this.idleOnEnter,
-        onUpdate: this.idleOnUpdate,
-      })
-      .addState('fall', {
-        onUpdate: this.fallOnUpdate,
-        onEnter: this.fallOnEnter,
-      });
+    // eslint-disable-next-line object-curly-newline
+    const { walk, jump, idle, fall } = this.handleHooksFactory();
 
-    // data: MatterJS.ICollisionPair
+    this.stateMachine
+      .addState('walk', walk)
+      .addState('jump', jump)
+      .addState('idle', idle)
+      .addState('fall', fall);
+
+    const isCurrentState = this.stateMachine.isCurrentState.bind(this.stateMachine);
+
     this.sprite.setOnCollide(() => {
-      if (this.stateMachine.isCurrentState('fall') || this.stateMachine.isCurrentState('jump')) {
-        this.stateMachine.setState('idle');
-      }
+      const isPlayerFallingOrJumping = isCurrentState('fall') || isCurrentState('jump');
+
+      if (isPlayerFallingOrJumping) this.stateMachine.setState('idle');
     });
 
     this.stateMachine.setState('idle');
   }
 
-  public update(dt: number) {
+  private createSprite(map: Phaser.Tilemaps.Tilemap) {
+    let spriteSpawn: number[] = [];
+
+    const objectsLayer = map.getObjectLayer('objects');
+
+    objectsLayer.objects.forEach(({ x, y, ...e }) => {
+      if (e.name === 'captain-spawn') spriteSpawn = [x! + e.width! * 0.5, y!];
+    });
+
+    this.sprite = this.scene.matter.add.sprite(spriteSpawn[0], spriteSpawn[1], 'captain');
+
+    this.sprite.setBody({ width: 24, height: 30 });
+    this.sprite.body.position.y += 4;
+
+    this.sprite.setFixedRotation();
+
+    this.scene.cameras.main.startFollow(this.sprite);
+  }
+
+  public update(dt: number): void {
     this.stateMachine.update(dt);
   }
 
-  // private handleHooks(): Hooks {
-
-  // }
-
-  private idleOnEnter() {
-    this.sprite.play('player-idle');
-  }
-
-  private idleOnUpdate() {
-    if (this.cursors.left.isDown || this.cursors.right.isDown) {
-      this.stateMachine.setState('walk');
+  private handleHooksFactory(): Hooks {
+    function idleOnEnter(this: PlayerController) {
+      this.sprite.play('player-idle');
     }
 
-    const spaceJustPressed = Input.Keyboard.JustDown(this.cursors.space);
+    function idleOnUpdate(this: PlayerController) {
+      if (this.cursors.left.isDown || this.cursors.right.isDown) {
+        this.stateMachine.setState('walk');
+      }
 
-    if (spaceJustPressed) {
-      this.stateMachine.setState('jump');
-    }
-  }
+      const spaceJustPressed = Input.Keyboard.JustDown(this.cursors.space);
 
-  private fallOnEnter() {
-    this.sprite.play('player-fall');
-  }
-
-  private walkOnEnter() {
-    this.sprite.play('player-walk');
-  }
-
-  private jumpOnEnter() {
-    this.sprite.setVelocityY(-9);
-    this.sprite.play('player-jump', true);
-  }
-
-  private jumpOnUpdate() {
-    if (this.cursors.left.isDown) {
-      this.sprite.setFlipX(true);
-      this.sprite.setVelocityX(-this.captainSpeed);
-    } else if (this.cursors.right.isDown) {
-      this.sprite.setFlipX(false);
-      this.sprite.setVelocityX(this.captainSpeed);
+      if (spaceJustPressed) {
+        this.stateMachine.setState('jump');
+      }
     }
 
-    if (this.sprite.body.velocity.y > 0) {
-      this.stateMachine.setState('fall');
+    function walkOnEnter(this: PlayerController) {
+      this.sprite.play('player-walk');
     }
+
+    function walkOnUpdate(this: PlayerController) {
+      if (this.cursors.left.isDown) {
+        this.sprite.setFlipX(true);
+        this.sprite.setVelocityX(-this.captainSpeed);
+      } else if (this.cursors.right.isDown) {
+        this.sprite.setFlipX(false);
+        this.sprite.setVelocityX(this.captainSpeed);
+      } else {
+        this.sprite.setVelocityX(0);
+        this.stateMachine.setState('idle');
+      }
+
+      const spaceJustPressed = Input.Keyboard.JustDown(this.cursors.space);
+
+      if (spaceJustPressed) {
+        this.stateMachine.setState('jump');
+      }
+    }
+
+    function jumpOnEnter(this: PlayerController) {
+      this.sprite.setVelocityY(-9);
+      this.sprite.play('player-jump', true);
+    }
+
+    function jumpOnUpdate(this: PlayerController) {
+      if (this.cursors.left.isDown) {
+        this.sprite.setFlipX(true);
+        this.sprite.setVelocityX(-this.captainSpeed);
+      } else if (this.cursors.right.isDown) {
+        this.sprite.setFlipX(false);
+        this.sprite.setVelocityX(this.captainSpeed);
+      }
+
+      if (this.sprite.body.velocity.y > 0) {
+        this.stateMachine.setState('fall');
+      }
+    }
+
+    function fallOnUpdate(this: PlayerController) {
+      if (this.cursors.left.isDown) {
+        this.sprite.setFlipX(true);
+        this.sprite.setVelocityX(-this.captainSpeed);
+      } else if (this.cursors.right.isDown) {
+        this.sprite.setFlipX(false);
+        this.sprite.setVelocityX(this.captainSpeed);
+      }
+    }
+
+    function fallOnEnter(this: PlayerController) {
+      this.sprite.play('player-fall');
+    }
+
+    return {
+      walk: {
+        onEnter: walkOnEnter.bind(this),
+        onUpdate: walkOnUpdate.bind(this),
+      },
+      idle: {
+        onEnter: idleOnEnter.bind(this),
+        onUpdate: idleOnUpdate.bind(this),
+      },
+      jump: {
+        onEnter: jumpOnEnter.bind(this),
+        onUpdate: jumpOnUpdate.bind(this),
+      },
+      fall: {
+        onEnter: fallOnEnter.bind(this),
+        onUpdate: fallOnUpdate.bind(this),
+      },
+    };
   }
 
-  private fallOnUpdate() {
-    if (this.cursors.left.isDown) {
-      this.sprite.setFlipX(true);
-      this.sprite.setVelocityX(-this.captainSpeed);
-    } else if (this.cursors.right.isDown) {
-      this.sprite.setFlipX(false);
-      this.sprite.setVelocityX(this.captainSpeed);
-    }
-  }
-
-  private walkOnUpdate() {
-    if (this.cursors.left.isDown) {
-      this.sprite.setFlipX(true);
-      this.sprite.setVelocityX(-this.captainSpeed);
-    } else if (this.cursors.right.isDown) {
-      this.sprite.setFlipX(false);
-      this.sprite.setVelocityX(this.captainSpeed);
-    } else {
-      this.sprite.setVelocityX(0);
-      this.stateMachine.setState('idle');
-    }
-
-    const spaceJustPressed = Input.Keyboard.JustDown(this.cursors.space);
-
-    if (spaceJustPressed) {
-      this.stateMachine.setState('jump');
-    }
-  }
-
-  private createCaptainAnimations() {
+  private createCaptainAnimations(): void {
     this.sprite.anims.create({
       key: 'player-jump',
       frameRate: 10,
@@ -171,3 +204,8 @@ class PlayerController {
 }
 
 export default PlayerController;
+
+// width: 960, // 30
+// height: 384, // 12
+// width: 640, // 20
+// height: 288, // 9
