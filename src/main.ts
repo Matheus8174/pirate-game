@@ -3,22 +3,21 @@ import '../public/style.css';
 import Phaser, { Types, AUTO } from 'phaser';
 
 import Preloader from './scenes/Preloader';
-import Game from './scenes/Game';
-import ParallaxScene from './scenes/ParallaxScene';
+import CreateMap from './scenes/CreateMap';
 
 const config: Types.Core.GameConfig = {
   type: AUTO,
-  width: 768,
-  height: 448,
+  width: 768, // 24
+  height: 384, // 12
   physics: {
     default: 'matter',
     matter: {
       debug: false,
     },
   },
-  scene: [ParallaxScene],
+  scene: [Preloader, CreateMap],
   scale: {
-    zoom: 2,
+    zoom: 1.5,
   },
 };
 
