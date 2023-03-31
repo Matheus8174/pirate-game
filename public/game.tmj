@@ -1,15 +1,175 @@
 { "compressionlevel":-1,
- "editorsettings":
-    {
-     "export":
-        {
-         "format":"json",
-         "target":"game.json"
-        }
-    },
- "height":14,
+ "height":12,
  "infinite":false,
  "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 0,
+            86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 0,
+            86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 0,
+            86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 0,
+            86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 86, 0,
+            87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 86,
+            86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97,
+            98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109,
+            110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121,
+            122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133,
+            124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124, 124],
+         "height":12,
+         "id":4,
+         "locked":true,
+         "name":"Background",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":24,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":15,
+         "locked":true,
+         "name":"back-palm-tree",
+         "objects":[
+                {
+                 "gid":154,
+                 "height":53,
+                 "id":18,
+                 "name":"left",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":51,
+                 "x":65,
+                 "y":278
+                }, 
+                {
+                 "gid":151,
+                 "height":64,
+                 "id":19,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":427,
+                 "y":353
+                }, 
+                {
+                 "gid":151,
+                 "height":64,
+                 "id":20,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":368,
+                 "y":352
+                }, 
+                {
+                 "gid":152,
+                 "height":53,
+                 "id":21,
+                 "name":"left",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":51,
+                 "x":48,
+                 "y":350
+                }, 
+                {
+                 "gid":151,
+                 "height":64,
+                 "id":22,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":111,
+                 "y":357
+                }, 
+                {
+                 "gid":147,
+                 "height":53,
+                 "id":23,
+                 "name":"right",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":52,
+                 "x":214,
+                 "y":279
+                }, 
+                {
+                 "gid":148,
+                 "height":64,
+                 "id":24,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":529,
+                 "y":355
+                }, 
+                {
+                 "gid":148,
+                 "height":64,
+                 "id":25,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":510,
+                 "y":381
+                }, 
+                {
+                 "gid":144,
+                 "height":53,
+                 "id":26,
+                 "name":"right",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":52,
+                 "x":690,
+                 "y":347
+                }, 
+                {
+                 "gid":152,
+                 "height":53,
+                 "id":27,
+                 "name":"left",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":51,
+                 "x":338,
+                 "y":317
+                }, 
+                {
+                 "gid":151,
+                 "height":64,
+                 "id":30,
+                 "name":"regular",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":64,
+                 "x":288,
+                 "y":231
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
         {
          "data":[19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
             36, 36, 36, 8, 19, 7, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36, 8, 19, 19, 19, 19, 19, 19,
@@ -17,17 +177,40 @@
             0, 0, 0, 35, 37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 36, 36, 36, 36, 36, 8,
             2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
             19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 73, 0, 0, 0, 0, 0, 0, 0, 0, 18,
-            19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
+            19, 20, 0, 0, 0, 0, 0, 0, 142, 142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
             19, 20, 0, 0, 0, 0, 0, 0, 1, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
-            19, 20, 0, 0, 0, 0, 0, 0, 18, 19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
-            19, 20, 0, 0, 0, 0, 1, 2, 25, 19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
-            19, 20, 0, 0, 0, 0, 18, 19, 19, 19, 24, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
-            2, 2, 2, 2, 2, 2, 25, 19, 19, 19, 19, 19, 24, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 25,
-            19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19,
-            19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19],
-         "height":14,
+            19, 20, 0, 0, 0, 0, 0, 142, 18, 19, 20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
+            19, 20, 0, 0, 0, 0, 1, 2, 25, 19, 20, 0, 142, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18,
+            19, 20, 142, 142, 0, 141, 18, 19, 19, 19, 24, 2, 3, 141, 141, 141, 0, 0, 0, 0, 141, 141, 142, 18,
+            2, 2, 2, 2, 2, 2, 25, 19, 19, 19, 19, 19, 24, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 25],
+         "height":12,
          "id":1,
+         "locked":true,
          "name":"Terrain",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":24,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 135, 140, 136, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 138, 140, 139, 0, 0, 0, 0, 0, 134, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 135, 136,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 0, 0, 134, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 134, 0, 142, 0, 134, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 137, 0, 0, 0, 137, 0, 0, 0],
+         "height":12,
+         "id":10,
+         "locked":true,
+         "name":"Palm-tree",
          "opacity":1,
          "type":"tilelayer",
          "visible":true,
@@ -38,6 +221,7 @@
         {
          "draworder":"topdown",
          "id":2,
+         "locked":true,
          "name":"objects",
          "objects":[
                 {
@@ -53,12 +237,96 @@
                 }],
          "opacity":1,
          "type":"objectgroup",
+         "visible":false,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":14,
+         "locked":true,
+         "name":"front-palm-tree",
+         "objects":[
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":10,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":699.666666666667,
+                 "y":192
+                }, 
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":11,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":635.666666666667,
+                 "y":256
+                }, 
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":12,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":507.666666666667,
+                 "y":288
+                }, 
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":14,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":92.5,
+                 "y":192
+                }, 
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":17,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":477,
+                 "y":96
+                }, 
+                {
+                 "gid":143,
+                 "height":32,
+                 "id":28,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":39,
+                 "x":284.333333333333,
+                 "y":160
+                }],
+         "opacity":1,
+         "type":"objectgroup",
          "visible":true,
          "x":0,
          "y":0
         }],
- "nextlayerid":3,
- "nextobjectid":7,
+ "nextlayerid":17,
+ "nextobjectid":32,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.10.0",
@@ -846,6 +1114,146 @@
                 }],
          "tilewidth":32,
          "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "columns":12,
+         "firstgid":86,
+         "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Background\/BG Image.png",
+         "imageheight":128,
+         "imagewidth":384,
+         "margin":0,
+         "name":"background",
+         "spacing":0,
+         "tilecount":48,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "columns":3,
+         "firstgid":134,
+         "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Front Palm Trees\/Front Palm Bottom and Grass (32x32).png",
+         "imageheight":96,
+         "imagewidth":96,
+         "margin":0,
+         "name":"palm-tree-stem",
+         "spacing":0,
+         "tilecount":9,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "columns":0,
+         "firstgid":143,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"palm-trees",
+         "spacing":0,
+         "tilecount":1,
+         "tileheight":32,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Front Palm Trees\/Front Palm Tree Top 01.png",
+                 "imageheight":32,
+                 "imagewidth":39
+                }],
+         "tilewidth":39
+        }, 
+        {
+         "columns":0,
+         "firstgid":144,
+         "grid":
+            {
+             "height":1,
+             "orientation":"orthogonal",
+             "width":1
+            },
+         "margin":0,
+         "name":"back-palm-trees",
+         "spacing":0,
+         "tilecount":12,
+         "tileheight":64,
+         "tiles":[
+                {
+                 "id":0,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Right 04.png",
+                 "imageheight":53,
+                 "imagewidth":52
+                }, 
+                {
+                 "id":1,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Right 03.png",
+                 "imageheight":53,
+                 "imagewidth":52
+                }, 
+                {
+                 "id":2,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Right 02.png",
+                 "imageheight":53,
+                 "imagewidth":52
+                }, 
+                {
+                 "id":3,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Right 01.png",
+                 "imageheight":53,
+                 "imagewidth":52
+                }, 
+                {
+                 "id":4,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Regular 04.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":5,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Regular 03.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":6,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Regular 02.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":7,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Regular 01.png",
+                 "imageheight":64,
+                 "imagewidth":64
+                }, 
+                {
+                 "id":8,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Left 04.png",
+                 "imageheight":53,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":9,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Left 03.png",
+                 "imageheight":53,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":10,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Left 02.png",
+                 "imageheight":53,
+                 "imagewidth":51
+                }, 
+                {
+                 "id":11,
+                 "image":"Treasure Hunters\/Treasure Hunters\/Palm Tree Island\/Sprites\/Back Palm Trees\/Back Palm Tree Left 01.png",
+                 "imageheight":53,
+                 "imagewidth":51
+                }],
+         "tilewidth":64
         }],
  "tilewidth":32,
  "type":"map",

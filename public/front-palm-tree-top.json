@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "Front Palm Tree Top 01.png",
+	"frame": {"x":0,"y":0,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32}
+},
+{
+	"filename": "Front Palm Tree Top 02.png",
+	"frame": {"x":39,"y":0,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32}
+},
+{
+	"filename": "Front Palm Tree Top 03.png",
+	"frame": {"x":78,"y":0,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32}
+},
+{
+	"filename": "Front Palm Tree Top 04.png",
+	"frame": {"x":117,"y":0,"w":39,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":32},
+	"sourceSize": {"w":39,"h":32}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "front-palm-tree-top.png",
+	"format": "RGBA8888",
+	"size": {"w":156,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:005111279cafc0d1a710a9409be4c023:c9c40138ba03293bd056a9c9d56025d0:1f057d740b1c916fe282fb4aac2c6158$"
+}
+}
