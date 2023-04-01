@@ -1,4 +1,9 @@
-function createClouds(this: Phaser.Scene) {
+type CreateSmallCloudsProps = {
+  howManyClouds: number;
+  cloudVelocity: number;
+};
+
+function createBigCloud(this: Phaser.Scene) {
   const cloudY = this.game.scale.height * 0.5 + 68;
   const cloudVelocity = 0.1;
 
@@ -9,14 +14,7 @@ function createClouds(this: Phaser.Scene) {
   const cloud02 = this.add.image(width, cloudY, 'big-cloud').setOrigin(0, 0.5);
   const cloud03 = this.add.image(width + width, cloudY, 'big-cloud').setOrigin(0, 0.5);
 
-  const smallCloud = this.add.image(this.game.scale.width * 0.5, cloudY - 100, 'small-cloud').setOrigin(0, 0.5);
-  const smallCloud02 = this.add.image(this.game.scale.width * 0.5 + 250, cloudY - 150, 'small-cloud-02').setOrigin(0, 0.5);
-  const smallCloud03 = this.add.image(this.game.scale.width * 0.5 + 450, cloudY - 120, 'small-cloud').setOrigin(0, 0.5);
-
-  const halfHeight = this.game.scale.height * 0.5;
-  const smallCloudY = [halfHeight - 100, halfHeight - 50];
-
-  function updateBigCloud() {
+  return () => {
     if (cloud.getBounds().right <= 0) {
       cloud.x = width * 2;
     } else if (cloud02.getBounds().right <= 0) {
@@ -28,31 +26,63 @@ function createClouds(this: Phaser.Scene) {
     cloud.x -= cloudVelocity;
     cloud02.x -= cloudVelocity;
     cloud03.x -= cloudVelocity;
-  }
+  };
+}
+
+function createSmallClouds(this: Phaser.Scene, props: CreateSmallCloudsProps) {
+  const halfHeight = this.game.scale.height * 0.5;
+
+  const cloudSpawnRange = [
+    halfHeight - 100,
+    halfHeight - 70,
+    halfHeight - 50,
+    halfHeight - 30,
+    halfHeight,
+  ];
+
+  const cloudTextureRange = [
+    'small-cloud',
+    'small-cloud-02',
+    'small-cloud-03',
+  ];
+
+  const getRandomItemFromArray = (from: any[]) => from[
+    Math.floor(Math.random() * (from.length))
+  ];
+
+  // eslint-disable-next-line arrow-body-style
+  const clouds = Array.from({ length: props.howManyClouds }).map((_, index) => {
+    const x = this.game.scale.width * 0.5 + 200 * index;
+    const y = getRandomItemFromArray(cloudSpawnRange);
+
+    return this.add.image(x, y, getRandomItemFromArray(cloudTextureRange)).setOrigin(0, 0.5);
+  });
 
   const updateSmallCloud = () => {
-    smallCloud.x -= 0.5;
-    smallCloud02.x -= 0.5;
-    smallCloud03.x -= 0.5;
+    clouds.forEach((cloud) => {
+      // eslint-disable-next-line no-param-reassign
+      cloud.x -= props.cloudVelocity;
 
-    if (smallCloud.getBounds().right <= 0) {
-      smallCloud.setX(Number(this.game.config.width));
-      smallCloud.setY(smallCloudY[Math.floor(Math.random() * 3)]);
-    }
-
-    if (smallCloud03.getBounds().right <= 0) {
-      smallCloud03.setX(Number(this.game.config.width));
-      smallCloud03.setY(smallCloudY[Math.floor(Math.random() * 3)]);
-    }
-
-    if (smallCloud02.getBounds().right <= 0) {
-      smallCloud02.setX(Number(this.game.config.width));
-    }
+      if (cloud.getBounds().right <= 0) {
+        cloud.setX(Number(this.game.config.width));
+        cloud.setY(getRandomItemFromArray(cloudSpawnRange));
+      }
+    });
   };
+
+  return updateSmallCloud;
+}
+
+function createClouds(this: Phaser.Scene) {
+  const updateBigCloud = createBigCloud.call(this);
+  const updateSmallClouds = createSmallClouds.call(this, {
+    cloudVelocity: 0.5,
+    howManyClouds: 5,
+  });
 
   return () => {
     updateBigCloud();
-    updateSmallCloud();
+    updateSmallClouds();
   };
 }
 
