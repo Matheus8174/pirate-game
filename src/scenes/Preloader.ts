@@ -11,8 +11,9 @@ class Preloader extends Scene {
   }
 
   private loadClouds() {
-    this.load.image('small-cloud', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 2.png');
-    this.load.image('small-cloud-02', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 3.png');
+    this.load.image('small-cloud', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 1.png');
+    this.load.image('small-cloud-02', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 2.png');
+    this.load.image('small-cloud-03', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Small Cloud 3.png');
     this.load.image('big-cloud', 'Treasure Hunters/Treasure Hunters/Palm Tree Island/Sprites/Background/Big Clouds.png');
   }
 
