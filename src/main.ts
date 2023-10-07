@@ -17,7 +17,7 @@ const config: Types.Core.GameConfig = {
   },
   scene: [Preloader, CreateMap],
   scale: {
-    zoom: 1.5,
+    zoom: 2,
   },
 };
 

@@ -1,0 +1,92 @@
+{"frames": [
+
+{
+	"filename": "Ship Helm Idle 01.png",
+	"frame": {"x":0,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Idle 02.png",
+	"frame": {"x":31,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Idle 03.png",
+	"frame": {"x":62,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Idle 04.png",
+	"frame": {"x":93,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Idle 05.png",
+	"frame": {"x":124,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Idle 06.png",
+	"frame": {"x":155,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Turn 01.png",
+	"frame": {"x":186,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Turn 02.png",
+	"frame": {"x":217,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Turn 03.png",
+	"frame": {"x":248,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+},
+{
+	"filename": "Ship Helm Turn 04.png",
+	"frame": {"x":279,"y":0,"w":31,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":32},
+	"sourceSize": {"w":31,"h":32}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ship-helm.png",
+	"format": "RGBA8888",
+	"size": {"w":310,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:b029abc1f228bfa4e8ddbe227228b645:7df450f249bdf04095dbe5add59f08d8:2962681166feed7277082d3b850c8944$"
+}
+}

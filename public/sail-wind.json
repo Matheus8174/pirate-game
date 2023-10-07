@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "1.png",
+	"frame": {"x":0,"y":0,"w":28,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":50},
+	"sourceSize": {"w":28,"h":50}
+},
+{
+	"filename": "2.png",
+	"frame": {"x":0,"y":50,"w":28,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":50},
+	"sourceSize": {"w":28,"h":50}
+},
+{
+	"filename": "3.png",
+	"frame": {"x":0,"y":100,"w":28,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":50},
+	"sourceSize": {"w":28,"h":50}
+},
+{
+	"filename": "4.png",
+	"frame": {"x":0,"y":150,"w":28,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":50},
+	"sourceSize": {"w":28,"h":50}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "sail-wind.png",
+	"format": "RGBA8888",
+	"size": {"w":28,"h":200},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ad9dbd209ab403890a5590051189944a:4c667ae0de5189b9c8792bd3fad922e9:9cc48a95b24d81364bf782e5c7d8d3a0$"
+}
+}

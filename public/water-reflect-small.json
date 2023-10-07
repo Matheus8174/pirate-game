@@ -1,0 +1,60 @@
+{"frames": [
+
+{
+	"filename": "1.png",
+	"frame": {"x":0,"y":0,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+},
+{
+	"filename": "2.png",
+	"frame": {"x":0,"y":36,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+},
+{
+	"filename": "3.png",
+	"frame": {"x":0,"y":72,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+},
+{
+	"filename": "4.png",
+	"frame": {"x":0,"y":108,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+},
+{
+	"filename": "5.png",
+	"frame": {"x":0,"y":144,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+},
+{
+	"filename": "6.png",
+	"frame": {"x":0,"y":180,"w":56,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":56,"h":36},
+	"sourceSize": {"w":56,"h":36}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "water-reflect-small.png",
+	"format": "RGBA8888",
+	"size": {"w":56,"h":216},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e49882fdab1a44d09a42cbf848aeb935:a88fc4520420eaf85dd4a95e435eb785:ef1e1b437bbe3890cd67fa93c1cd7ff8$"
+}
+}

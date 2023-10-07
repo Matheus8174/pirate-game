@@ -1,0 +1,14 @@
+this.sprite.setOnCollide((data: MatterJS.ICollisionPair) => {
+      const { gameObject } = data.bodyA as MatterJS.BodyType;
+      const bodyb = data.bodyB as MatterJS.BodyType;
+
+      if (gameObject.tile?.properties?.floor && gameObject.tile?.collideUp) {
+        this.stateMachine.setState('idle');
+      }
+
+      if (gameObject.texture?.key === 'front-palm-tree-top') {
+        this.stateMachine.setState('idle');
+      }
+
+      console.log(gameObject.tile);
+    });

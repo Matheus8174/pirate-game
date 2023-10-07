@@ -31,6 +31,21 @@ class Preloader extends Scene {
 
   private loadWaterEffects() {
     this.load.atlas('water-reflect', 'water-reflect.png', 'water-reflect.json');
+    this.load.atlas('water-reflect-small', 'water-reflect-small.png', 'water-reflect-small.json');
+    this.load.atlas('water-reflect-small-02', 'water-reflect-small-02.png', 'water-reflect-small-02.json');
+  }
+
+  private loadShipHelm() {
+    this.load.atlas('ship-helm', 'ship-helm.png', 'ship-helm.json');
+  }
+
+  private loadWater() {
+    this.load.atlas('water', 'water.png', 'water.json');
+  }
+
+  private loadShip() {
+    this.load.atlas('ship', 'ship.png', 'ship.json');
+    this.load.atlas('sail-wind', 'sail-wind.png', 'sail-wind.json');
   }
 
   public preload() {
@@ -39,6 +54,9 @@ class Preloader extends Scene {
     this.loadWaterEffects();
     this.loadClouds();
     this.loadPalmTree();
+    this.loadShipHelm();
+    this.loadWater();
+    this.loadShip();
   }
 
   public create() {

@@ -4,8 +4,11 @@ import createWaterReflection from './createWaterReflection';
 import createBackPalmTree from './createBackPalmTree';
 import createClouds from './createClouds';
 import createFrontPalmTree from './createFrontPalmTree';
+import createShipHelm from './createShipHelm';
+import createWater from './createWater';
 
 import PlayerController from '../PlayerController';
+import createShip from './createShip';
 
 class CreateMap extends Scene {
   private playerController?: PlayerController;
@@ -40,23 +43,39 @@ class CreateMap extends Scene {
 
     createBackPalmTree.call(this, map);
 
-    this.playerController = new PlayerController(this, this.cursors, map);
+    const { height, width } = this.game.config;
 
-    createFrontPalmTree.call(this, map);
+    // const x = Number(width) * 0.5;
+    // const y = (Number(height) + Number(height)) * 0.4 - 3;
+
+    // createShipHelm.call(this, { x, y });
+
+    createShip.call(this, map);
+
+    createWater.call(this, map);
 
     const tileset = map.addTilesetImage('terrain', 'terrain');
 
     const terrainLayer = map.createLayer('Terrain', [tileset, grasSandPalmTrees]);
 
-    map.createLayer('Palm-tree', grasSandPalmTrees);
-
     terrainLayer.setCollisionByProperty({ collides: true });
 
     this.matter.world.convertTilemapLayer(terrainLayer);
 
-    // this.cameras.main.width *= 0.5;
-    // this.cameras.main.height *= 0.5;
-    this.cameras.main.setBounds(0, 0, this.scale.width, this.scale.height);
+    this.playerController = new PlayerController(this, this.cursors, map, terrainLayer);
+
+    createFrontPalmTree.call(this, map);
+
+    map.createLayer('Palm-tree', grasSandPalmTrees);
+
+    // this.cameras.main.width *= 0.9;
+    // this.cameras.main.height *= 0.9;
+    this.cameras.main.setBounds(
+      0,
+      -140,
+      Number(width) + 90,
+      520,
+    );
   }
 }
 

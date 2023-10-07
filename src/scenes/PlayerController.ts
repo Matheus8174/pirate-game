@@ -17,6 +17,7 @@ class PlayerController {
     private scene: Phaser.Scene,
     private cursors: Types.Input.Keyboard.CursorKeys,
     map: Phaser.Tilemaps.Tilemap,
+    private terrainLayer: Phaser.Tilemaps.TilemapLayer,
   ) {
     this.createSprite(map);
 
@@ -33,12 +34,16 @@ class PlayerController {
       .addState('idle', idle)
       .addState('fall', fall);
 
-    const isCurrentState = this.stateMachine.isCurrentState.bind(this.stateMachine);
+    this.sprite.setOnCollide((data: MatterJS.ICollisionPair) => {
+      const { gameObject } = data.bodyA as MatterJS.BodyType;
 
-    this.sprite.setOnCollide(() => {
-      const isPlayerFallingOrJumping = isCurrentState('fall') || isCurrentState('jump');
+      if (gameObject.tile?.properties?.floor) {
+        this.stateMachine.setState('idle');
+      }
 
-      if (isPlayerFallingOrJumping) this.stateMachine.setState('idle');
+      if (gameObject.texture?.key) {
+        this.stateMachine.setState('idle');
+      }
     });
 
     this.stateMachine.setState('idle');
@@ -204,8 +209,3 @@ class PlayerController {
 }
 
 export default PlayerController;
-
-// width: 960, // 30
-// height: 384, // 12
-// width: 640, // 20
-// height: 288, // 9

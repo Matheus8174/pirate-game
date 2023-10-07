@@ -3,7 +3,7 @@ function createWaterReflection(this: Phaser.Scene) {
   const width = Number(this.game.config.width);
 
   const waterReflects = [
-    { x: width * 0.5 + 200, y: height * 0.5 + 130, type: 'Big' },
+    { x: width * 0.5 + 260, y: height * 0.5 + 130, type: 'Big' },
     { x: width * 0.5 - 250, y: height * 0.5 + 130, type: 'Big' },
   ];
 
